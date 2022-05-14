@@ -1,5 +1,4 @@
 package test.pages;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -42,5 +41,11 @@ public class LoginPage {
 
     public void clickLoginButton() {
         driver.findElement(loginButtonBy).click();
+    }
+
+    public void enterLoginDetails(String email, String password) {
+            setEmail(email);
+            setPassword(password);
+            clickLoginButton();
     }
 }
